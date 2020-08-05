@@ -1,0 +1,745 @@
+﻿@page "/"
+@inject IModalService Modal
+
+<article class="survey-page survey-page-white">
+    <header class="survey-page-header" style="text-align:center">
+
+        <div class="survey-title-container clearfix
+                survey-title-align-left has-survey-logo survey-title-logo-align-top  has-survey-title ">
+            <h3>
+                <span class="oi oi-pencil mr-2" aria-hidden="true" style="        color: #161C5C
+"></span>
+                <strong>Blazor survey</strong>
+            </h3>
+        </div>
+
+        <div class="page-title-container page-title-container-v2 clearfix">
+
+
+            <div class="notranslate">
+                <h2 class="page-title-wrapper clearfix">
+                    <span class="page-number">
+
+                    </span>
+
+                    <span class="page-title user-generated">
+
+                    </span>
+                </h2>
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </header>
+    <section class="survey-page-body">
+        <!--<form name="surveyForm" action="" method="post" enctype="multipart/form-data" novalidate="" data-survey-page-form="">-->
+        <div class="questions clearfix py-2">
+            <div class="question-row clearfix">
+                <div class="question-container">
+                    <div class=" question-single-choice-radio qn question vertical_two_col question-required">
+                        <fieldset class=" question-fieldset" data-radio-button-group="">
+                            <legend class="question-legend">
+                                <!--<h4 id="257847009-validation-message"
+                                    class="question-validation-theme" aria-live="polite" tabindex="-1">
+                                    <span aria-hidden="true" class="question-validation-icon">!</span>
+                                    <span class="user-generated">
+                                        This question requires an answer.
+
+                                    </span>
+                                </h4>-->
+                                <h4 id="question-title-257847009" class="question-title-container">
+                                    <span class="required-asterisk notranslate">
+                                        *
+                                    </span>
+                                    <span class="question-number notranslate">
+                                        1<span class="question-dot">.</span>
+                                    </span>
+                                    <span class="user-generated notranslate">How easy or hard was getting started with Blazor for you?</span>
+                                </h4>
+                            </legend>
+                            <div class="question-body clearfix notranslate ">
+
+
+
+
+                                <div class="answer-option-col
+                            answer-option-col-2">
+
+                                    <div class="answer-option-cell">
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847009">
+                                            <input id="257847009_1773396662" aria-labelledby="257847009_1773396662_label" name="257847009" type="radio" role="radio" class="radio-button-input " value="1773396662" aria-checked="false" aria-describedby="257847009-validation-message">
+                                            <label data-sm-radio-button-label="" id="257847009_1773396662_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847009_1773396662">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Very easy
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="answer-option-cell">
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847009">
+                                            <input id="257847009_1773396663" aria-labelledby="257847009_1773396663_label" name="257847009" type="radio" role="radio" class="radio-button-input " value="1773396663" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847009_1773396663_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847009_1773396663">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Easy
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="answer-option-cell">
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847009">
+                                            <input id="257847009_1773396664" aria-labelledby="257847009_1773396664_label" name="257847009" type="radio" role="radio" class="radio-button-input " value="1773396664" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847009_1773396664_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847009_1773396664">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Neither easy nor hard
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="answer-option-col
+                            answer-option-col-2">
+
+                                    <div class="answer-option-cell">
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847009">
+                                            <input id="257847009_1773396665" aria-labelledby="257847009_1773396665_label" name="257847009" type="radio" role="radio" class="radio-button-input " value="1773396665" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847009_1773396665_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847009_1773396665">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Hard
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="answer-option-cell">
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847009">
+                                            <input id="257847009_1773396666" aria-labelledby="257847009_1773396666_label" name="257847009" type="radio" role="radio" class="radio-button-input " value="1773396666" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847009_1773396666_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847009_1773396666">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Very hard
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div><div class="question-row clearfix">
+                <div class="question-container">
+                    <div id="question-field-257847011" data-qnumber="2" data-qdispnumber="2" data-question-id="257847011" class=" question-single-choice-radio qn question vertical_two_col question-required">
+
+
+                        <h3 class="screenreader-only"></h3><fieldset class=" question-fieldset" data-radio-button-group="">
+                            <legend class="question-legend">
+
+
+
+                                <h4 id="question-title-257847011" class="question-title-container">
+                                    <span class="required-asterisk notranslate">
+                                        *
+                                    </span>
+
+
+                                    <span class="question-number notranslate">
+                                        2<span class="question-dot">.</span>
+                                    </span>
+
+
+                                    <span class="user-generated notranslate">How would you rate the quality of Blazor?</span>
+
+                                </h4>
+                            </legend>
+                            <div class="question-body clearfix notranslate ">
+
+
+
+
+                                <div class="answer-option-col
+                            answer-option-col-2">
+
+                                    <div class="answer-option-cell">
+
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847011">
+                                            <input id="257847011_1773396672" aria-labelledby="257847011_1773396672_label" name="257847011" type="radio" role="radio" class="radio-button-input " value="1773396672" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847011_1773396672_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847011_1773396672">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Very high quality
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="answer-option-cell">
+
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847011">
+                                            <input id="257847011_1773396673" aria-labelledby="257847011_1773396673_label" name="257847011" type="radio" role="radio" class="radio-button-input " value="1773396673" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847011_1773396673_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847011_1773396673">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    High quality
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="answer-option-cell">
+
+
+
+
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847011">
+                                            <input id="257847011_1773396674" aria-labelledby="257847011_1773396674_label" name="257847011" type="radio" role="radio" class="radio-button-input " value="1773396674" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847011_1773396674_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847011_1773396674">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Neither high nor low quality
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="answer-option-col
+                            answer-option-col-2">
+
+                                    <div class="answer-option-cell">
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847011">
+                                            <input id="257847011_1773396675" aria-labelledby="257847011_1773396675_label" name="257847011" type="radio" role="radio" class="radio-button-input " value="1773396675" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847011_1773396675_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847011_1773396675">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Low quality
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="answer-option-cell">
+
+
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847011">
+                                            <input id="257847011_1773396676" aria-labelledby="257847011_1773396676_label" name="257847011" type="radio" role="radio" class="radio-button-input " value="1773396676" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847011_1773396676_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847011_1773396676">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Very low quality
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div><div class="question-row clearfix
+                   ">
+                <div data-question-type="single_choice_vertical_two_col" data-rq-question-type="single_choice_vertical_two_col" class="question-container
+
+
+
+
+    ">
+
+                    <div id="question-field-257847012" data-qnumber="4" data-qdispnumber="3" data-question-id="257847012" class=" question-single-choice-radio qn question vertical_two_col question-required">
+
+
+                        <h3 class="screenreader-only"></h3><fieldset class=" question-fieldset" data-radio-button-group="">
+                            <legend class="question-legend">
+
+
+                                <h4 id="question-title-257847012" class="question-title-container">
+                                    <span class="required-asterisk notranslate">
+                                        *
+                                    </span>
+
+
+                                    <span class="question-number notranslate">
+                                        3<span class="question-dot">.</span>
+                                    </span>
+
+
+                                    <span class="user-generated notranslate">How likely are you to use Blazor again in the future?</span>
+
+                                </h4>
+                            </legend>
+                            <div class="question-body clearfix notranslate ">
+
+
+
+
+                                <div class="answer-option-col
+                            answer-option-col-2">
+
+                                    <div class="answer-option-cell">
+
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847012">
+                                            <input id="257847012_1773396677" aria-labelledby="257847012_1773396677_label" name="257847012" type="radio" role="radio" class="radio-button-input " value="1773396677" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847012_1773396677_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847012_1773396677">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Extremely likely
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="answer-option-cell">
+
+
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847012">
+                                            <input id="257847012_1773396678" aria-labelledby="257847012_1773396678_label" name="257847012" type="radio" role="radio" class="radio-button-input " value="1773396678" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847012_1773396678_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847012_1773396678">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Very likely
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="answer-option-cell">
+
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847012">
+                                            <input id="257847012_1773396679" aria-labelledby="257847012_1773396679_label" name="257847012" type="radio" role="radio" class="radio-button-input " value="1773396679" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847012_1773396679_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847012_1773396679">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Somewhat likely
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="answer-option-col
+                            answer-option-col-2">
+
+                                    <div class="answer-option-cell">
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847012">
+                                            <input id="257847012_1773396680" aria-labelledby="257847012_1773396680_label" name="257847012" type="radio" role="radio" class="radio-button-input " value="1773396680" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847012_1773396680_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847012_1773396680">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Not so likely
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="answer-option-cell">
+
+
+
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847012">
+                                            <input id="257847012_1773396681" aria-labelledby="257847012_1773396681_label" name="257847012" type="radio" role="radio" class="radio-button-input " value="1773396681" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847012_1773396681_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847012_1773396681">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Not at all likely
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div><div class="question-row clearfix
+                   ">
+                <div data-question-type="single_choice_vertical_two_col" data-rq-question-type="single_choice_vertical_two_col" class="question-container
+
+
+    ">
+
+                    <div id="question-field-257847010" data-qnumber="5" data-qdispnumber="4" data-question-id="257847010" class=" question-single-choice-radio qn question vertical_two_col question-required">
+
+
+                        <h3 class="screenreader-only"></h3><fieldset class=" question-fieldset" data-radio-button-group="">
+                            <legend class="question-legend">
+
+
+
+                                <h4 id="question-title-257847010" class="question-title-container">
+                                    <span class="required-asterisk notranslate">
+                                        *
+                                    </span>
+
+
+                                    <span class="question-number notranslate">
+                                        4<span class="question-dot">.</span>
+                                    </span>
+
+
+                                    <span class="user-generated notranslate">Overall, how satisfied or dissatisfied are you with Blazor?</span>
+
+                                </h4>
+                            </legend>
+                            <div class="question-body clearfix notranslate ">
+
+
+
+
+                                <div class="answer-option-col
+                            answer-option-col-2">
+
+                                    <div class="answer-option-cell">
+
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847010">
+                                            <input id="257847010_1773396667" aria-labelledby="257847010_1773396667_label" name="257847010" type="radio" role="radio" class="radio-button-input " value="1773396667" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847010_1773396667_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847010_1773396667">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Very satisfied
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="answer-option-cell">
+
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847010">
+                                            <input id="257847010_1773396668" aria-labelledby="257847010_1773396668_label" name="257847010" type="radio" role="radio" class="radio-button-input " value="1773396668" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847010_1773396668_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847010_1773396668">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Somewhat satisfied
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="answer-option-cell">
+
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847010">
+                                            <input id="257847010_1773396669" aria-labelledby="257847010_1773396669_label" name="257847010" type="radio" role="radio" class="radio-button-input " value="1773396669" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847010_1773396669_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847010_1773396669">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Neither satisfied nor dissatisfied
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="answer-option-col
+                            answer-option-col-2">
+
+                                    <div class="answer-option-cell">
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847010">
+                                            <input id="257847010_1773396670" aria-labelledby="257847010_1773396670_label" name="257847010" type="radio" role="radio" class="radio-button-input " value="1773396670" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847010_1773396670_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847010_1773396670">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Somewhat dissatisfied
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="answer-option-cell">
+
+
+
+                                        <div data-sm-radio-button="" class="radio-button-container " aria-labelledby="question-title-257847010">
+                                            <input id="257847010_1773396671" aria-labelledby="257847010_1773396671_label" name="257847010" type="radio" role="radio" class="radio-button-input " value="1773396671" aria-checked="false">
+                                            <label data-sm-radio-button-label="" id="257847010_1773396671_label" class="answer-label radio-button-label no-touch touch-sensitive clearfix" for="257847010_1773396671">
+                                                <span class="radio-button-display ">
+
+                                                </span>
+
+
+                                                <span class="radio-button-label-text question-body-font-theme user-generated ">
+                                                    Very dissatisfied
+
+                                                </span>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+        <div class="survey-submit-actions center-text clearfix">
+
+
+            <button @onclick="ShowModal" data-toggle="modal" data-target="#exampleModal" class="btn small next-button survey-page-button user-generated notranslate">
+
+                Submit
+
+            </button>
+
+
+        </div>
+
+
+        <input type="hidden" id="survey_data" name="survey_data" value="4FoTYerhlqpl9PSGmuD5IWZm1jByXaVUJAOqleBhHIf7H9FQNPV7_2BX_2BV5epuqerI4caJ1keNPxtQxlWA7c0zoVuqDUW9Eb03483L_2FmLTq9cn0d587BUxjHg_2B44TP8OuDssYsYOgFAgjbHcqGF4f6snqW_2BnN_2FrBy7nBRhf3OSYYg_2BCMr4rGwpdEQ1U3DveuANbUVsynYFbCuX_2FwqhxD0_2Bw3qhOUK5ko460v9myiwJtpgVXQFouhZIOLrz98RVyL9YoeXBtBUFkpcuvMLeSId3dtjIxWYVsYJJTamvMZEQ0VN5haHb_2BNnmula_2BwrznwUBmXQCeCIrt216ks4f1ChYfd95Q6bmHlSElcvUC_2FCOxw1LcbkIh4_2Bn4zTfRj_2FZaNUTAY1xxQaaSrSz0xWxCR5bkDmSnapRKqePLAIvOayzvf2UJDY8r8wO8lQ6eLx8S5Hou6z6NkEMKfFuulJr2C3DeoCbRYZfoRzVlkHN5rUiAdzA_3D">
+        <input type="hidden" data-response-quality="" id="response_quality_data" name="response_quality_data" value="{}">
+        <input type="hidden" id="is_previous" name="is_previous" value="false">
+
+
+        <input type="hidden" id="disable_survey_buttons_on_submit" name="disable_survey_buttons_on_submit" value="">
+
+
+    </section>
+    <footer class="survey-footer bottom">
+    </footer>
+
+
+</article>
+
+@code {
+
+    void ShowModal() => Modal.Show<Confirm>("Thank you for trying out blazer survey.");
+}

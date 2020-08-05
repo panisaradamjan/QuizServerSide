@@ -1,0 +1,215 @@
+﻿@page "/manage-Quiz"
+
+
+<h1>Manage Quiz</h1>
+
+<button class="btn btn-primary my-md-4" @onclick="(() => ShowComponent = true)">Add Quize</button>
+
+@if (ShowComponent)
+{
+<div class="card mb-4">
+    <div class="card-title text-right"> <span class="oi oi-x mr-2" aria-hidden="true" @onclick="(() => ShowComponent = false)"></span></div>
+    <div class="card-body">
+        <div class="form-group">
+            <label>CategoryCode</label>
+            <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Choose...</option>
+                <option value="1">Education group 1</option>
+                <option value="2">Education group 2</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Title</label>
+            <input class="form-control" type="text" />
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <input class="form-control" type="text" />
+        </div>
+        <div class="form-group">
+            <label>PassScore</label>
+            <input class="form-control" type="text" />
+        </div>
+
+        <div class="m-5">
+            <div class="row  mt-4">
+                <div class="col"><h5>List Question (appear after adding Question & Answer)</h5></div>
+
+            </div>
+            <button class="btn btn-primary my-md-2" @onclick="(() => ShowlistQuestion = true)">Add Question</button>
+            @if (ShowlistQuestion)
+            {
+                <div class="card mb-4">
+                    <div class="card-title text-right"> <span class="oi oi-x mr-2" aria-hidden="true" @onclick="(() => ShowlistQuestion = false)"></span></div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Question No.</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label>Question Title</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label>Question Score</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="form-group m-5">
+                            <div>
+                                <button class="btn btn-primary my-md-2" @onclick="IncrementCount">Add Answer</button>
+                            </div>
+                            @for (var i = 1; i < currentCount; i++)
+                            {
+                                <div class="card mb-4 bg-light">
+
+
+
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label>Answers No. @i </label>
+                                            <input class="form-control" type="text" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Title</label>
+                                            <input class="form-control" type="text" />
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">IsCorrect</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            }
+
+                            @if (currentCount > 1)
+                            {
+                                <div class="card-title text-right" style="cursor:pointer;color:red" @onclick="() => RemoveCard()"> <span class="oi oi-x mr-2" aria-hidden="true"></span>Remove Answer</div>
+                            }
+
+                        </div>
+
+
+                    </div>
+                    @if (!ShowlistAns)
+                    {
+                        <div class="text-right mr-2">
+                            <button class="btn btn-info my-md-4" @onclick="(() => ShowlistQuestion = false)">Save to list question</button>
+                        </div>
+                    }
+
+                </div>
+            }
+
+            @if (!ShowlistQuestion)
+            {
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Question No.</th>
+                            <th>Question Title</th>
+                            <th>Question Score</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>How easy or hard was getting started with Blazor for you?</td>
+                            <td>5</td>
+                            <td><span class="oi oi-circle-x mr-2 text-danger" aria-hidden="true"></span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>How would you rate the quality of Blazor?</td>
+                            <td>10</td>
+                            <td><span class="oi oi-circle-x mr-2 text-danger" aria-hidden="true"></span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>How likely are you to use Blazor again in the future?</td>
+                            <td>15</td>
+                            <td><span class="oi oi-circle-x mr-2 text-danger" aria-hidden="true"></span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Overall, how satisfied or dissatisfied are you with Blazor?</td>
+                            <td>20</td>
+                            <td><span class="oi oi-circle-x mr-2 text-danger" aria-hidden="true"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+
+        </div>
+       
+    </div>
+    <div class="card-footer bg-light">
+        <div class="text-right">
+            <button class="btn btn-success" @onclick="(() => ShowComponent = false)">Save Quiz</button>
+        </div>
+    </div>
+</div>
+}
+
+@if (!ShowComponent)
+{
+    <div class="row  mb-4">
+        <div class="col"><h5>List Quiz</h5></div>
+        <div class="col">
+            <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Choose Category...</option>
+                <option value="1">Education group 1</option>
+                <option value="2">Education group 2</option>
+            </select>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>PassScore</th>
+                <th>CategoryCode</th>
+                <th>Tool</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Blazor survey</td>
+                <td>Get our most powerful features and make smarter decisions with SurveyMonkey Enterprise. </td>
+                <td>89</td>
+                <td>Education group 1</td>
+                <td><span class="oi oi-pencil mr-2 text-info" aria-hidden="true"></span><span class="oi oi-circle-x mr-2 text-danger" aria-hidden="true"></span></td>
+            </tr>
+            <tr>
+                <td>Lazanda</td>
+                <td>Lazanda survey</td>
+                <td>90</td>
+                <td>Education group 2</td>
+                <td><span class="oi oi-pencil mr-2 text-info" aria-hidden="true"></span><span class="oi oi-circle-x mr-2 text-danger" aria-hidden="true"></span></td>
+            </tr>
+        </tbody>
+    </table>
+   }
+
+    @code {
+        bool ShowComponent { get; set; } = false;
+        bool ShowlistQuestion { get; set; } = false;
+        bool ShowlistAns { get; set; } = false;
+
+        private int currentCount = 1;
+
+        private void IncrementCount()
+        {
+            currentCount++;
+        }
+
+        private void RemoveCard()
+        {
+            currentCount--;
+        }
+
+    }
+

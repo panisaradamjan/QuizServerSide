@@ -1,0 +1,69 @@
+﻿
+
+@page "/category"
+
+<h3>Manage Category</h3>
+<button class="btn btn-primary my-md-4" @onclick="(() => Showlistcategory = true)">Add Category</button>
+
+@if (Showlistcategory)
+{
+    <div class="card mb-4">
+        <div class="card-title text-right"> <span class="oi oi-x mr-2" aria-hidden="true" @onclick="(() => Showlistcategory = false)"></span></div>
+        <div class="card-body">
+            <div class="form-group">
+                <label>Code</label>
+                <input class="form-control" type="text" />
+            </div>
+            <div class="form-group">
+                <label>Title</label>
+                <input class="form-control" type="text" />
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <input class="form-control" type="text" />
+            </div>
+
+        </div>
+        <div class="text-right mr-2">
+            <button class="btn btn-success my-md-4" @onclick="(() => Showlistcategory = false)">save</button>
+        </div>
+
+    </div>
+}
+@if (!Showlistcategory)
+{
+    <div class="row  mb-4">
+        <div class="col"><h3>List Category</h3></div>
+
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Tool</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Education group 1</td>
+                <td>Education group p'oad</td>
+                <td>The group for eng.</td>
+                <td><span class="oi oi-pencil mr-2 text-info" aria-hidden="true"></span><span class="oi oi-circle-x mr-2 text-danger" aria-hidden="true"></span></td>
+            </tr>
+            <tr>
+                <td>Education group 2</td>
+                <td>Education group p'nhooy</td>
+                <td>The group for th.</td>
+                <td><span class="oi oi-pencil mr-2 text-info" aria-hidden="true"></span><span class="oi oi-circle-x mr-2 text-danger" aria-hidden="true"></span></td>
+            </tr>
+        </tbody>
+    </table>
+ }
+    @code {
+
+        bool Showlistcategory { get; set; } = false;
+
+    }

@@ -1,0 +1,18 @@
+﻿<div>
+    <span class="oi oi-check mr-2" aria-hidden="true" style="color:forestgreen"></span><strong style="color:forestgreen">Pass</strong>
+    <p>
+        Your total score:89%
+
+    </p>
+    <button @onclick="Close" class="btn btn-secondary">Close</button>
+   
+</div>
+
+@code {
+
+    [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set; }
+
+    void Close() => BlazoredModal.Close(ModalResult.Ok(true));
+    void Cancel() => BlazoredModal.Cancel();
+
+}
